@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { createPortal } from 'react-dom';
+import profilePic from './assets/profile-pic.png';
 import { 
   Github, 
   Linkedin, 
@@ -251,7 +252,7 @@ const Portfolio = () => {
 
                 {/* Image */}
                 <img 
-                  src="/profile-pic.png"  
+                  src={profilePic}  
                   onError={(e) => {
                     e.target.onerror = null; 
                     e.target.src = "https://ui-avatars.com/api/?name=Vishwas+K+V&background=000&color=22d3ee&size=512";
