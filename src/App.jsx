@@ -409,14 +409,15 @@ const Portfolio = () => {
           <div className="grid md:grid-cols-2 gap-8 md:gap-12">
             {/* Project 1 */}
             <TiltCard className="h-full">
-              <div className="h-full bg-black border border-slate-800 relative overflow-hidden group rounded-xl">
-                <div className="absolute inset-0 bg-cyan-500/5 group-hover:bg-cyan-500/10 transition-colors"></div>
-                <div className="p-8 relative z-10 flex flex-col h-full">
-                  <div className="flex justify-between items-start mb-6">
-                    <div className="p-3 bg-cyan-500/10 rounded-lg border border-cyan-500/20">
-                      <Cpu className="text-cyan-400" size={32} />
-                    </div>
-                    <ExternalLink className="text-slate-600 group-hover:text-white transition-colors" size={24} />
+              <a href="https://github.com/vishwaskv362/AI-Resume-Hunter" target="_blank" rel="noopener noreferrer" className="h-full block">
+                <div className="h-full bg-black border border-slate-800 relative overflow-hidden group rounded-xl">
+                  <div className="absolute inset-0 bg-cyan-500/5 group-hover:bg-cyan-500/10 transition-colors"></div>
+                  <div className="p-8 relative z-10 flex flex-col h-full">
+                    <div className="flex justify-between items-start mb-6">
+                      <div className="p-3 bg-cyan-500/10 rounded-lg border border-cyan-500/20">
+                        <Cpu className="text-cyan-400" size={32} />
+                      </div>
+                      <ExternalLink className="text-slate-600 group-hover:text-white transition-colors" size={24} />
                   </div>
                   
                   <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">AI Resume Hunter</h3>
@@ -436,18 +437,20 @@ const Portfolio = () => {
                   </div>
                 </div>
               </div>
+              </a>
             </TiltCard>
 
             {/* Project 2 */}
             <TiltCard className="h-full">
-              <div className="h-full bg-black border border-slate-800 relative overflow-hidden group rounded-xl">
-                <div className="absolute inset-0 bg-purple-500/5 group-hover:bg-purple-500/10 transition-colors"></div>
-                <div className="p-8 relative z-10 flex flex-col h-full">
-                  <div className="flex justify-between items-start mb-6">
-                    <div className="p-3 bg-purple-500/10 rounded-lg border border-purple-500/20">
-                      <Database className="text-purple-400" size={32} />
-                    </div>
-                    <ExternalLink className="text-slate-600 group-hover:text-white transition-colors" size={24} />
+              <a href="https://github.com/vishwaskv362/ecommerce_fast_api" target="_blank" rel="noopener noreferrer" className="h-full block">
+                <div className="h-full bg-black border border-slate-800 relative overflow-hidden group rounded-xl">
+                  <div className="absolute inset-0 bg-purple-500/5 group-hover:bg-purple-500/10 transition-colors"></div>
+                  <div className="p-8 relative z-10 flex flex-col h-full">
+                    <div className="flex justify-between items-start mb-6">
+                      <div className="p-3 bg-purple-500/10 rounded-lg border border-purple-500/20">
+                        <Database className="text-purple-400" size={32} />
+                      </div>
+                      <ExternalLink className="text-slate-600 group-hover:text-white transition-colors" size={24} />
                   </div>
                   
                   <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors">E-Comm Microservice</h3>
@@ -467,6 +470,73 @@ const Portfolio = () => {
                   </div>
                 </div>
               </div>
+              </a>
+            </TiltCard>
+
+            {/* Project 3 */}
+            <TiltCard className="h-full">
+              <a href="https://github.com/vishwaskv362/url-shortener" target="_blank" rel="noopener noreferrer" className="h-full block">
+                <div className="h-full bg-black border border-slate-800 relative overflow-hidden group rounded-xl">
+                  <div className="absolute inset-0 bg-emerald-500/5 group-hover:bg-emerald-500/10 transition-colors"></div>
+                  <div className="p-8 relative z-10 flex flex-col h-full">
+                    <div className="flex justify-between items-start mb-6">
+                      <div className="p-3 bg-emerald-500/10 rounded-lg border border-emerald-500/20">
+                        <Terminal className="text-emerald-400" size={32} />
+                      </div>
+                      <ExternalLink className="text-slate-600 group-hover:text-white transition-colors" size={24} />
+                  </div>
+                  
+                  <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-emerald-400 transition-colors">URL Shortener & Analytics</h3>
+                  <p className="text-slate-400 mb-8 flex-grow font-sans text-sm leading-relaxed">
+                    Flask-powered URL shortening service with PostgreSQL backend. Tracks click analytics with comprehensive metadata including IP addresses, geolocation, and referrer data. Containerized with Docker Compose for seamless deployment.
+                  </p>
+
+                  <div className="space-y-4">
+                    <div className="h-1 w-full bg-slate-900 rounded overflow-hidden">
+                      <div className="h-full bg-emerald-500 w-5/6 animate-pulse"></div>
+                    </div>
+                    <div className="flex gap-4 text-xs font-mono text-emerald-600">
+                      <span>FLASK</span>
+                      <span>POSTGRES</span>
+                      <span>DOCKER</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              </a>
+            </TiltCard>
+
+            {/* Project 4 */}
+            <TiltCard className="h-full">
+              <a href="https://github.com/vishwaskv362/flask-task-manager-api" target="_blank" rel="noopener noreferrer" className="h-full block">
+                <div className="h-full bg-black border border-slate-800 relative overflow-hidden group rounded-xl">
+                  <div className="absolute inset-0 bg-orange-500/5 group-hover:bg-orange-500/10 transition-colors"></div>
+                  <div className="p-8 relative z-10 flex flex-col h-full">
+                    <div className="flex justify-between items-start mb-6">
+                      <div className="p-3 bg-orange-500/10 rounded-lg border border-orange-500/20">
+                        <Code className="text-orange-400" size={32} />
+                      </div>
+                      <ExternalLink className="text-slate-600 group-hover:text-white transition-colors" size={24} />
+                  </div>
+                  
+                  <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-orange-400 transition-colors">Task Manager REST API</h3>
+                  <p className="text-slate-400 mb-8 flex-grow font-sans text-sm leading-relaxed">
+                    Comprehensive Flask REST API for task management with user authentication and SQLite persistence. Modern Python development using uv package manager for efficient dependency and virtual environment handling.
+                  </p>
+
+                  <div className="space-y-4">
+                    <div className="h-1 w-full bg-slate-900 rounded overflow-hidden">
+                      <div className="h-full bg-orange-500 w-4/5 animate-pulse"></div>
+                    </div>
+                    <div className="flex gap-4 text-xs font-mono text-orange-600">
+                      <span>FLASK</span>
+                      <span>SQLITE</span>
+                      <span>REST_API</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              </a>
             </TiltCard>
           </div>
         </section>
