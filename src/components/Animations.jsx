@@ -59,9 +59,9 @@ export const FadeIn = ({ children, delay = 0, direction = "up", className = "" }
       className={className}
       initial={{ opacity: 0, ...directions[direction] }}
       whileInView={{ opacity: 1, y: 0, x: 0 }}
-      viewport={{ once: true, margin: "-100px" }}
+      viewport={{ once: true, margin: "-50px" }}
       transition={{
-        duration: 0.8,
+        duration: 0.6,
         delay,
         ease: [0.21, 0.47, 0.32, 0.98],
       }}
@@ -78,9 +78,9 @@ export const ScaleIn = ({ children, delay = 0, className = "" }) => {
       className={className}
       initial={{ opacity: 0, scale: 0.8 }}
       whileInView={{ opacity: 1, scale: 1 }}
-      viewport={{ once: true, margin: "-100px" }}
+      viewport={{ once: true, margin: "-50px" }}
       transition={{
-        duration: 0.6,
+        duration: 0.5,
         delay,
         ease: [0.21, 0.47, 0.32, 0.98],
       }}
@@ -97,7 +97,7 @@ export const StaggerContainer = ({ children, staggerDelay = 0.1, className = "" 
       className={className}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, margin: "-100px" }}
+      viewport={{ once: true, margin: "-50px" }}
       variants={{
         hidden: {},
         visible: {
@@ -123,7 +123,7 @@ export const StaggerItem = ({ children, className = "" }) => {
           opacity: 1,
           y: 0,
           transition: {
-            duration: 0.5,
+            duration: 0.4,
             ease: [0.21, 0.47, 0.32, 0.98],
           },
         },
@@ -139,8 +139,8 @@ export const MagneticButton = ({ children, className = "" }) => {
   return (
     <motion.div
       className={className}
-      whileHover={{ scale: 1.05 }}
-      whileTap={{ scale: 0.95 }}
+      whileHover={{ scale: 1.03 }}
+      whileTap={{ scale: 0.97 }}
       transition={{ type: "spring", stiffness: 400, damping: 17 }}
     >
       {children}
@@ -149,18 +149,18 @@ export const MagneticButton = ({ children, className = "" }) => {
 };
 
 // Glowing orb animation
-export const GlowingOrb = ({ color = "cyan", size = "100px", className = "" }) => {
+export const GlowingOrb = ({ color = "#00f5ff", size = "100px", className = "" }) => {
   return (
     <motion.div
-      className={`absolute rounded-full blur-3xl opacity-30 ${className}`}
+      className={`absolute rounded-full blur-3xl opacity-20 ${className}`}
       style={{
         width: size,
         height: size,
-        background: color === "cyan" ? "#06b6d4" : color === "purple" ? "#8b5cf6" : color,
+        background: color,
       }}
       animate={{
         scale: [1, 1.2, 1],
-        opacity: [0.3, 0.5, 0.3],
+        opacity: [0.2, 0.3, 0.2],
       }}
       transition={{
         duration: 4,
@@ -177,12 +177,9 @@ export const FloatingCard = ({ children, className = "" }) => {
     <motion.div
       className={className}
       whileHover={{
-        y: -10,
-        rotateX: 5,
-        rotateY: 5,
+        y: -8,
         transition: { duration: 0.3 },
       }}
-      style={{ transformStyle: "preserve-3d" }}
     >
       {children}
     </motion.div>
@@ -196,9 +193,9 @@ export const ParallaxWrapper = ({ children, offset = 50, className = "" }) => {
       className={className}
       initial={{ y: offset }}
       whileInView={{ y: 0 }}
-      viewport={{ once: false, margin: "-200px" }}
+      viewport={{ once: false, margin: "-100px" }}
       transition={{
-        duration: 1,
+        duration: 0.8,
         ease: [0.21, 0.47, 0.32, 0.98],
       }}
     >
@@ -211,8 +208,8 @@ export const ParallaxWrapper = ({ children, offset = 50, className = "" }) => {
 export const GradientBorderCard = ({ children, className = "" }) => {
   return (
     <motion.div
-      className={`relative p-[1px] rounded-2xl overflow-hidden ${className}`}
-      whileHover={{ scale: 1.02 }}
+      className={`relative p-[1px] rounded-lg overflow-hidden ${className}`}
+      whileHover={{ scale: 1.01 }}
       transition={{ duration: 0.3 }}
     >
       <motion.div
@@ -227,7 +224,7 @@ export const GradientBorderCard = ({ children, className = "" }) => {
         }}
         style={{ backgroundSize: "200% 200%" }}
       />
-      <div className="relative bg-slate-900 rounded-2xl h-full">
+      <div className="relative bg-gray-900 rounded-lg h-full">
         {children}
       </div>
     </motion.div>
@@ -245,6 +242,31 @@ export const TypingText = ({ text, className = "", speed = 50 }) => {
       style={{ overflow: "hidden", whiteSpace: "nowrap", display: "inline-block" }}
     >
       {text}
+    </motion.span>
+  );
+};
+
+// Glitch effect text
+export const GlitchText = ({ children, className = "" }) => {
+  return (
+    <motion.span
+      className={`relative inline-block ${className}`}
+      animate={{
+        x: [0, -2, 2, 0],
+        textShadow: [
+          "0 0 0 transparent",
+          "2px 0 #ff00ff, -2px 0 #00f5ff",
+          "-2px 0 #ff00ff, 2px 0 #00f5ff",
+          "0 0 0 transparent",
+        ],
+      }}
+      transition={{
+        duration: 0.2,
+        repeat: Infinity,
+        repeatDelay: 3,
+      }}
+    >
+      {children}
     </motion.span>
   );
 };
